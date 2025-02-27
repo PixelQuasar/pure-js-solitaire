@@ -1,0 +1,32 @@
+{
+  "name": "pure-js-solitaire",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js",
+    "dev": "npx nodemon ./server.js",
+    "pm2:start": "npx pm2 start ./server.js",
+    "pm2:stop": "npx pm2 stop ./server.js",
+    "pm2:restart": "npx pm2 restart ./server.js",
+    "pm2:delete": "npx pm2 delete ./server.js"
+  },
+  "devDependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7",
+    "pm2": "^5.4.3"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PixelQuasar/pure-js-solitaire.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PixelQuasar/pure-js-solitaire/issues"
+  },
+  "homepage": "https://github.com/PixelQuasar/pure-js-solitaire#readme",
+  "description": ""
+}

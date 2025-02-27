@@ -1,0 +1,115 @@
+* {
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+body {
+    background-color: #121212;
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-object {
+    position: absolute;
+}
+
+.sprite {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.game-card {
+    width: 80px;
+    height: 112px;
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 150px;
+    cursor: pointer;
+    transition: transform 0.5s ease, rotate 0.5s ease, scale 0.5s ease;
+    user-select: none;
+    transform-origin: center;
+
+    &.drag {
+        transition: rotate 0.5s ease, scale 0.5s ease;
+    }
+}
+
+.game-object-inactive {
+    cursor: default;
+}
+
+.restock-button {
+    width: 80px;
+    height: 112px;
+    z-index: -1;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 48px;
+    color: #888888;
+}
+
+.undo-button {
+    font-size: 24px;
+    padding: 8px;
+}
+
+.ui-label {
+    font-size: 24px;
+    color: #f1f1f1;
+    font-weight: bolder;
+}
+
+.tableau-column-starter {
+    width: 80px;
+    height: 112px;
+    z-index: -1;
+    background-color: #222222;
+}
+
+.victory-label {
+    font-size: 48px;
+    color: #f1f1f1;
+    font-weight: bolder;
+}
+
+.defeat-label {
+    font-size: 48px;
+    color: #f1f1f1;
+    font-weight: bolder;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+   width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f1f1f1;
+}
+
+#defeat {
+    display: none;
+}
+
+#victory {
+    display: none;
+}
