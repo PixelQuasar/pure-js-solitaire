@@ -240,10 +240,12 @@ Renderer.prototype.arrangeField = function () {
 
     if (this.gameState.status === 'VICTORY') {
         this.clearField();
+        document.getElementById('modal').style.display = 'flex';
         document.getElementById('victory').style.display = 'flex';
         return;
     } else if (this.gameState.status === 'DEFEAT') {
         this.clearField();
+        document.getElementById('modal').style.display = 'flex';
         document.getElementById('defeat').style.display = 'flex';
         return;
     }
@@ -486,6 +488,7 @@ Renderer.prototype.handleDnDEnd = function (cardObject) {
 Renderer.prototype.initRender = function (root) {
     this.initFieldObjects();
     const container = document.createElement('div');
+
     container.innerHTML = `
 <div id="modal">
 <div class="alert" id="victory">
@@ -496,11 +499,10 @@ Renderer.prototype.initRender = function (root) {
      <h1 class="alertHeader">Defeat!</h1>
      <h3>Reload to try again</h3>
 </div>
-</div>
-`;
-
+</div>`;
     container.id = 'container';
     root.appendChild(container);
+
     Object.values(this.gameObjects).forEach((gameObject) => {
         gameObject.applyStyle();
         gameObject.applyEventListeners({
